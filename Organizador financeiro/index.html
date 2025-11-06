@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/login.css">
+    <title>Wanzai - Controle Financeiro</title>
+</head>
+
+<body>
+
+    <!-- TELA DE LOGIN -->
+    <section class="tela-login , card" id="telaLogin"> <!-- Tela de login -->
+        <h1 class="titulo-login">Login Financeiro</h1> <!-- Título da tela de login -->
+        <form class="content-login">    <!-- Formulário de login -->
+            <input type="email" name="email" placeholder="Digite seu email" required>   <!-- Campo de email -->
+            <input type="password" name="senha" placeholder="Digite sua senha" required>    <!-- Campo de senha -->
+            <button type="submit" class="button-login">Entrar</button>  <!-- Botão de login -->
+            <button type="button" class="button-criar-cc" onclick="mostrarCadastro()">Criar conta</button> <!-- Botão para mostrar a tela de cadastro -->
+        </form>
+    </section>
+    <!-- /TELA DE LOGIN -->
+
+    <!-- TELA DE CADASTRO -->
+    <section class="tela-cadastro card escondido" id="telaCadastro"> <!-- Tela de cadastro inicialmente escondida -->
+        <h1 class="titulo-cadastro">Crie seu cadastro</h1> <!-- Título da tela de cadastro -->
+        <form class="form-cadastro"> <!-- Formulário de cadastro -->
+            <input type="te" name="nome" placeholder="Digite seu nome" required> <!-- Campo de nome -->
+
+            <div class="date-login"> <!-- Campo de data de nascimento -->
+                <label for="data-nascimento">Data de nascimento:</label> <!-- Rótulo do campo de data de nascimento -->
+                <input type="date" id="data-nascimento" name="data-nascimento" required> <!-- Campo de data de nascimento -->
+            </div>
+
+            <input type="email" name="email" placeholder="Digite seu email" required> <!-- Campo de email -->
+            <input type="password" name="senha" placeholder="Digite sua senha" required> <!-- Campo de senha -->
+            <button type="submit" class="button-criar-conta">Cadastrar</button> <!-- Botão de cadastro -->
+            <button class="button-voltar" onclick="mostrarCadastro()">Voltar</button> <!-- Botão de voltar para a tela de login -->
+        </form>
+    </section>
+    <!-- /TELA DE CADASTRO -->
+
+</body>
+<script src="./script.js"></script> <!-- Link para o arquivo JavaScript -->
+</html>

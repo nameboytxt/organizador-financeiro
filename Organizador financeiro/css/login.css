@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+:root {
+    --primary-color: rgb(9, 255, 0);
+    --bg-color: rgb(100, 100, 100);
+    --card-color: rgb(72, 72, 72);
+    --shadow-color: #343434;
+    --button-color: rgb(0, 158, 0);
+    --button-hover: rgb(29, 189, 29);
+    --text-color: #fff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Nunito", monospace;
+    color: var(--text-color);
+}
+
+.escondido {
+    display: none;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    height: 100vh;
+    background-color: var(--bg-color);
+    padding: 2em;
+}
+
+/* --- COMPONENTE CARD --- */
+.card {
+    background-color: var(--card-color);
+    padding: 2.5em;
+    margin: 2em;
+    border-radius: 10px;
+    box-shadow: 0 6px 10px 0 var(--shadow-color);
+    width: 100%;
+    max-width: 400px;
+}
+
+/* --- TÍTULOS --- */
+.titulo-login,
+.titulo-cadastro {
+    color: var(--primary-color);
+    font-size: 2.2em;
+    font-weight: 700;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+/* --- INPUTS --- */
+input {
+    padding: 1rem;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    width: 100%;
+    background-color: #5c5c5c;
+    color: #fff;
+}
+
+input:focus {
+    box-shadow: 0 0 6px var(--primary-color);
+    background-color: #6e6e6e;
+}
+
+/* --- LOGIN --- */
+.content-login {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.content-login button {
+    padding: 13px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    background-color: var(--button-color);
+    font-size: 1.1em;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    width: 100%;
+}
+
+.content-login button:hover {
+    background-color: var(--button-hover);
+    box-shadow: 0 6px 10px 0 var(--shadow-color);
+}
+
+/* --- CADASTRO --- */
+.form-cadastro {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.date-login label {
+    font-size: 0.9em;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.button-criar-conta,
+.button-voltar {
+    padding: 13px;
+    border: none;
+    border-radius: 10px;
+    background-color: var(--primary-color);
+    color: #121212;
+    font-size: 1.1em;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.button-criar-conta:hover,
+.button-voltar:hover {
+    background-color: rgb(47, 255, 92);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+}
+
+.button-criar-conta:active {
+    transform: scale(0.98);
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
+}
+
+/* --- RESPONSIVIDADE --- */
+@media (max-width: 480px) {
+    .card {
+        padding: 1.5em;
+    }
+
+    .titulo-login,
+    .titulo-cadastro {
+        font-size: 1.8em;
+    }
+}
